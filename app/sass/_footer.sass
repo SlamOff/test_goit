@@ -1,0 +1,67 @@
+@import variables
+
+.footer
+    &__wrapper
+        height: 60px
+        border-top: 1px solid #e5e5e5
+        display: flex
+        align-items: center
+        justify-content: space-between
+        @media #{$sm-down}
+            display: block
+            text-align: center
+            height: auto
+            padding: 15px 0
+    &__text
+        color: $color-gray
+        font-weight: 500
+        @media #{$sm-down}
+            margin-bottom: 15px
+        span
+            color: $color-red
+    &__form
+        font-size: 0
+        &__btn
+            height: 100%
+            @media #{$xs-down}
+                display: block
+                width: 100%
+                max-width: 230px
+                margin: 0 auto
+        &__input
+            height: 40px
+            text-indent: 10px
+            padding-right: 10px
+            width: 230px
+            border: 1px solid #e5e5e5
+            font-size: 15px
+            color: $color-gray
+            @media #{$xs-down}
+                display: block
+                width: 100%
+                max-width: 230px
+                margin: 0 auto 15px
+            &::-webkit-input-placeholder
+                font-size: 15px
+                color: #999
+                font-weight: 300
+                font-style: italic
+                font-family: $font-roboto
+            &::-moz-placeholder
+                font-size: 15px
+                color: #999
+                font-weight: 300
+                font-style: italic
+                font-family: $font-roboto
+            &:-ms-input-placeholder
+                font-size: 15px
+                color: #999
+                font-weight: 300
+                font-style: italic
+                font-family: $font-roboto
+            &:-moz-placeholder
+                font-size: 15px
+                color: #999
+                font-weight: 300
+                font-style: italic
+                font-family: $font-roboto

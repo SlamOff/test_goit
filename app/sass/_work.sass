@@ -1,0 +1,33 @@
+@import variables
+
+.work
+    margin-bottom: -90px
+    &__wrapper
+        margin: 60px 0 -90px
+    &::after
+        display: table
+    &__item
+        display: flex
+        margin-bottom: 90px
+        +col(4)
+        @media #{$lg-down}
+            +col(6)
+        @media #{$sm-down}
+            +col(12)
+            margin-bottom: 40px
+        &__title
+            margin-bottom: 20px
+        &__icon
+            flex: 0 0 22%
+            font-size: 30px
+            color: $color-green
+            text-align: center
+            @media #{$lg-down}
+            flex: 0 0 18%
+            @media #{$md-down}
+                text-align: left
+                flex: 0 0 15%
+        &__text
+            flex: 0 0 70%
+            @media #{$lg-down}
+            flex: 0 0 80%

@@ -1,0 +1,96 @@
+@import variables
+
+.clearfix
+	height: 1px
+	clear: both
+	display: table
+body
+	min-width: 320px
+	font-family: $font-montserrat
+	font-weight: normal
+	position: relative
+	margin: 0 auto
+	overflow-x: hidden
+	p
+		font-size: 15px
+		line-height: 24px
+		color: #999
+		font-family: $font-roboto
+	h5.item-title
+		font-size: 14px
+		color: $color-gray
+		text-transform: uppercase
+		font-weight: 500
+	.btn-primary
+		font-size: 14px
+		font-weight: bold
+		text-transform: uppercase
+		color: #fff
+		border: 3px solid #fff
+		padding: 0 30px
+		height: 40px
+		line-height: 34px
+		transition: all 0.3s ease-in
+		&:hover
+			background-color: #fff
+			color: $color-green
+	.btn-secondary
+		@extend .btn-primary
+		background-color: $color-green
+		border: 3px solid $color-green
+	.section-title
+		position: relative
+		text-align: center
+		color: $color-gray
+		padding-bottom: 45px
+		&::before
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			height: 3px
+			width: 60px
+			margin: auto
+			background-color: $color-red
+		h3
+			font-size: 24px
+			font-family: $font-kaushan
+			margin-bottom: 20px
+		h4
+			font-size: 30px
+			font-weight: bold
+			text-transform: uppercase
+	button
+		border: 0
+		outline: 0
+		cursor: pointer
+	section
+		padding: 46px 0
+$cols: 12
+$col: calc( 100% / #{$cols} )
+=col($num)
+	float: left
+	width: calc( #{$col} * #{$num} )
+=offset($offset)
+		margin-left: calc( #{$col} * #{$offset}
+.container
+	margin: 0 auto
+	position: relative
+	width: 1440px
+	&:after
+		display: table
+		content: ""
+		clear: both
+	@media #{$xlg-down}
+		width: 1200px
+	@media #{$lg-down}
+		width: 970px
+	@media #{$md-down}
+		width: 750px
+	@media #{$sm-down}
+		width: 540px
+	@media #{$xs-down}
+		width: 100%
+		padding: 0 15px
+	
